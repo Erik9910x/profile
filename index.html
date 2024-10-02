@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erik's Personal Website</title>
+    <style>
+        :root {
+            --background: #ffffff;
+            --foreground: #000000;
+            --muted: #f1f5f9;
+            --muted-foreground: #64748b;
+            --primary: #0ea5e9;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background);
+            color: var(--foreground);
+            line-height: 1.5;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4rem;
+        }
+        nav a {
+            color: var(--foreground);
+            text-decoration: none;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: none;
+        }
+        .nav-links a {
+            margin-left: 1.5rem;
+        }
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        .menu-button {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        #about {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .intro {
+            max-width: 600px;
+            margin-bottom: 2rem;
+            color: var(--muted-foreground);
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .button-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        .button-outline {
+            border: 1px solid var(--foreground);
+            color: var(--foreground);
+        }
+        #projects {
+            background-color: var(--muted);
+            padding: 4rem 0;
+        }
+        .projects-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .project-card {
+            background-color: var(--background);
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project-card-content {
+            padding: 1rem;
+        }
+        .project-card h3 {
+            margin-top: 0;
+        }
+        .project-card p {
+            color: var(--muted-foreground);
+            font-size: 0.875rem;
+        }
+        #contact {
+            padding: 4rem 0;
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--muted-foreground);
+            border-radius: 0.25rem;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .social-links a {
+            color: var(--foreground);
+            font-size: 1.5rem;
+        }
+        footer {
+            background-color: var(--muted);
+            padding: 1.5rem 0;
+            text-align: center;
+            color: var(--muted-foreground);
+        }
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+            .nav-links {
+                display: flex;
+            }
+            .menu-button {
+                display: none;
+            }
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Erik</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="menu-button">☰</button>
+        </nav>
+    </header>
+    <main>
+        <section id="about" class="container">
+            <h1>Hi, I'm Erik</h1>
+            <p class="intro">I'm here to cook.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="button button-primary"># GAY </a>
+                <a href="#" class="button button-outline"># MAMABOI </a>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="container">
+                <h2>My Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="/bro.png?height=200&width=200" alt="OMG ">
+                        <div class="project-card-content">
+                            <h3>W-AZURE</h3>
+                            <p>W PREMIUM LUA HUB TO EXPLOIT BLOX SHIT ( BLOX FRUIT - ROBLOX )</p>
+                            <div class="cta-buttons">
+                                <a href="#" class="button button-outline">discord.gg/wazure</a>
+                                <a href="#" class="button button-outline">I LOVE NEKO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="container">
+            <h2>Get in Touch</h2>
+
+            <div class="social-links">
+                <a href="#" aria-label="Email">✉️</a>
+                <a href="#" aria-label="GitHub">🐙</a>
+                <a href="#" aria-label="LinkedIn">🔗</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            © 2024 Erik. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
